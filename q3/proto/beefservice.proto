@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package service;
+option go_package="./services";
+
+
+service Beef {
+    rpc Summary(EmptyRequest) returns(BeefSummaryResponse);
+}
+message EmptyRequest {
+}
+message BeefSummaryResponse {
+    bytes data = 1;
+}
