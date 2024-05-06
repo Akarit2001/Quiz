@@ -47,6 +47,17 @@ func main() {
 		}
 	}
 
+	for i := len(s1) - 1; i > 0; i-- {
+		cur := s1[i]
+		next := s1[i-1]
+		switch s[i-1] {
+		case 'L':
+			if !(cur < next) {
+				s1[i-1] = s1[i] + 1
+			}
+		}
+	}
+
 	sum := 0
 	for _, r := range s1 {
 		sum += int(r) - '0'
