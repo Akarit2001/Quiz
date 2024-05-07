@@ -55,6 +55,8 @@ func main() {
 			if !(cur < next) {
 				s1[i-1] = s1[i] + 1
 			}
+		case '=':
+			s1[i-1] = s1[i]
 		}
 	}
 
